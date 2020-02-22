@@ -4,45 +4,61 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity(name = "convidado")
+@Entity(name="convidado")
 public class Convidado {
-    @Id
-    @GeneratedValue
-    private Long id;
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	private String nome;
+	
+	private String email;
+	
+	private String telefone;
+	
+	public Convidado(){
+		
+	}
 
-    private String nome;
-    private String email;
-    private String telefone;
+	public Convidado(String nome, String email, String telefone) {
+		super();
+		this.nome = nome;
+		this.email = email;
+		this.telefone = telefone;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getNome() {
-        return nome;
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getTelefone() {
-        return telefone;
-    }
+	public String getTelefone() {
+		return telefone;
+	}
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	
+
 }
